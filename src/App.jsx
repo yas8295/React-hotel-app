@@ -16,12 +16,11 @@ import OrderError from "./Components/OrderError";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <AppLayout></AppLayout>,
     errorElement: <Error></Error>,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home></Home>,
       },
       {
