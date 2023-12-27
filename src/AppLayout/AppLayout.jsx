@@ -9,7 +9,7 @@ export default function AppLayout() {
   const loading = navigation.state === "loading";
 
   return (
-    <div className="flex justify-between items-center flex-col w-full max-h-screen min-h-screen overflow-y-hidden">
+    <div className="flex justify-between items-center flex-col w-full max-h-screen min-h-screen">
       <div className="absolute right-[-4px] top-[13px] scale-[0.70] rotate-90">
         <DarkModeButton />
       </div>
