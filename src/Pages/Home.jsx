@@ -14,7 +14,7 @@ export default function Home() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!userName) return;
-    navigate("/Menu");
+    navigate("/React-Pizza-App/Menu");
     dispatch(setUser());
   }
 

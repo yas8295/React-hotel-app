@@ -31,12 +31,11 @@ export default function Cart() {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
       >
-        <Link className="flex gap-2 items-center" to={"/Menu"}>
+        <Link className="flex gap-2 items-center" to={"/React-Pizza-App/Menu"}>
           <span className="rounded-full grow flex justify-center items-center bg-yellow-500 px-2 text-lg w-fit no-underline text-black">
             ←
           </span>
           <span className=" text-blue-600 hover:underline dark:text-white">
-            {" "}
             to menu
           </span>
         </Link>
@@ -96,7 +95,7 @@ export default function Cart() {
           <Button
             title="ORDER PIZZAS"
             padding="py-3 px-5"
-            event={(e) => navigate("/order/new")}
+            event={(e) => navigate("/React-Pizza-App/order/new")}
           ></Button>
           <Button
             title="CLEAR CART"

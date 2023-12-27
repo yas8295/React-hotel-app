@@ -22,7 +22,7 @@ export default function Error() {
         </span>
       </section>
       <div className="link-container">
-        <Link to="/" className="more-link">
+        <Link to="/React-Pizza-App/" className="more-link">
           Go To Home
         </Link>
       </div>

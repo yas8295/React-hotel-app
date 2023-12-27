@@ -13,7 +13,7 @@ export default function Header() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!searchOrder) return;
-    navigate(`/order/${searchOrder}`);
+    navigate(`/React-Pizza-App/order/${searchOrder}`);
     setSearchOrder("");
   }
 

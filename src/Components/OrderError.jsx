@@ -11,11 +11,13 @@ export default function OrderError() {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
       >
-        <Link className="flex gap-2 items-center" to={"/"}>
+        <Link className="flex gap-2 items-center" to={"/React-Pizza-App/"}>
           <span className="rounded-full flex justify-center items-center text-black bg-yellow-500 px-2 text-lg w-fit no-underline">
             ←
           </span>
-          <span className="text-blue-600 hover:underline dark:text-white"> GO BACK</span>
+          <span className="text-blue-600 hover:underline dark:text-white">
+            GO BACK
+          </span>
         </Link>
         <h1 className="text-lg font-semibold">
           Something went wrong 😢 Couldn't find order #asdqe

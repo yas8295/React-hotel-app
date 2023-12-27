@@ -216,5 +216,5 @@ export async function action({ request }) {
 
   store.dispatch(clearCart());
 
-  return redirect(`/order/${newOrder.id}`);
+  return redirect(`/React-Pizza-App/order/${newOrder.id}`);
 }

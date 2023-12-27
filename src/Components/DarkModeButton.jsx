@@ -16,7 +16,7 @@ function dark() {
 }
 
 export default function DarkModeButton() {
-  const [mode, setMode] = useState(dark());
+  const [mode, setMode] = useState(localStorage.them);
 
   return (
     <DarkModeToggle
