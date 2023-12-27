@@ -11,12 +11,10 @@ function dark() {
   document.documentElement.classList.toggle("dark");
   if (localStorage.theme === "light") localStorage.theme = "dark";
   else localStorage.theme = "light";
-
-  return localStorage.theme;
 }
 
 export default function DarkModeButton() {
-  const [mode, setMode] = useState(localStorage.them);
+  const [mode, setMode] = useState(localStorage.theme);
 
   return (
     <DarkModeToggle
@@ -31,7 +29,8 @@ export default function DarkModeButton() {
       inactiveThumbColor="#1e293b"
       activeThumbColor="#facc15"
       onChange={(mode) => {
-        setMode(dark());
+        setMode(mode);
+        dark();
       }}
     />
   );

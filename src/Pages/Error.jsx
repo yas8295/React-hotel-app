@@ -3,7 +3,6 @@ import "./Error.css";
 
 export default function Error() {
   const error = useRouteError();
-  console.log(error);
 
   return (
     <div className="flex dark:bg-stone-900 dark:text-slate-200 flex-col justify-center items-center min-h-screen bg-slate-100">
