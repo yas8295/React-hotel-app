@@ -11,10 +11,9 @@ export default function Footer() {
     <AnimatePresence mode="popLayout">
       {status ? (
         <motion.div
-          initial={{ y: "100%", opacity: 0 }}
+          initial={{ y: "-100%", opacity: 0 }}
           animate={{ y: "0", opacity: 0.95 }}
-          transition={{ type: "spring", stiffness: 200 }}
-          exit={{ opacity: 0, y: "100%" }}
+          exit={{ opacity: 0, y: "-100%" }}
           className="flex justify-between items-center fixed bottom-0 bottom-0 bg-stone-800 w-full text-white px-4 py-3"
         >
           <div className="flex gap-2 items-center">
