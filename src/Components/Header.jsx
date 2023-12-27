@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <div className="flex dark:bg-[#45402e] dark:text-white sm:justify-between items-center flex-wrap gap-2 justify-center sm:ps-5 sm:pe-16 py-2 bg-yellow-400 w-full">
-      <Link className="flex  items-center">
+      <Link className="flex  items-center" to={"/React-Pizza-App/"}>
         <motion.img
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

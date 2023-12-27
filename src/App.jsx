@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     errorElement: <Error></Error>,
     children: [
       {
-        path: "/home",
+        path: "/React-Pizza-App/",
         element: <Home></Home>,
       },
       {
