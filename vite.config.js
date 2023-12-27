@@ -5,5 +5,5 @@ import eslint from "vite-plugin-eslint";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), eslint()],
-  base: "https://yas8295.github.io/React-Pizza-App/",
+  base: "/React-Pizza-App/",
 });
