@@ -1,6 +1,19 @@
 import { useState } from "react";
 import { DarkModeToggle } from "@anatoliygatt/dark-mode-toggle";
-import { dark } from "../AppLayout/AppLayout";
+
+if (localStorage.theme === "dark") {
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
+function dark() {
+  document.documentElement.classList.toggle("dark");
+  if (localStorage.theme === "light") localStorage.theme = "dark";
+  else localStorage.theme = "light";
+
+  return localStorage.theme;
+}
 
 export default function DarkModeButton() {
   const [mode, setMode] = useState(dark());

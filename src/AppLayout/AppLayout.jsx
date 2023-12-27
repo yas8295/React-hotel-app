@@ -4,20 +4,6 @@ import Footer from "../Components/Footer";
 import Loading from "../Components/Loading";
 import DarkModeButton from "../Components/DarkModeButton";
 
-if (localStorage.theme === "dark") {
-  document.documentElement.classList.add("dark");
-} else {
-  document.documentElement.classList.remove("dark");
-}
-
-export function dark() {
-  document.documentElement.classList.toggle("dark");
-  if (localStorage.theme === "light") localStorage.theme = "dark";
-  else localStorage.theme = "light";
-
-  return localStorage.theme;
-}
-
 export default function AppLayout() {
   const navigation = useNavigation();
   const loading = navigation.state === "loading";
