@@ -24,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/React-Pizza-App/",
         element: <Home></Home>,
+        errorElement: <Error></Error>,
       },
       {
         path: "/React-Pizza-App/Menu",
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
         path: "/React-Pizza-App/order/new",
         element: <NewOrder></NewOrder>,
         action: actionCreateOrder,
+        errorElement: <Error></Error>,
       },
       {
         path: "/React-Pizza-App/order/:orderId",
