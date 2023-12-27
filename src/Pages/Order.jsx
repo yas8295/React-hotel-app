@@ -24,6 +24,10 @@ export default function Order() {
   const fetcher = useFetcher();
   const pizzas = useLoaderData();
 
+  console.log(fetcher);
+
+  console.log(pizzas);
+
   const deliveryIn = calcMinutesLeft(pizzas.estimatedDelivery);
 
   return (
@@ -64,7 +68,7 @@ export default function Order() {
           </h1>
           <p className="text-sm text-stone-500 dark:text-white dark:opacity-60">
             (Estimated delivery: {formatDate(pizzas.estimatedDelivery)})
-          </p>  
+          </p>
         </div>
         <div className="flex flex-col w-full">
           {pizzas.cart.map((item) => (
@@ -102,6 +106,7 @@ export default function Order() {
 
 export async function loader({ params }) {
   const order = await getOrder(params.orderId);
+  console.log(order);
   return order;
 }
 

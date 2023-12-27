@@ -14,7 +14,7 @@ export default function Home() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!userName) return;
-    navigate("/Menu");
+    navigate("/React-Pizza-App/Menu");
     dispatch(setUser());
   }
 
@@ -33,7 +33,7 @@ export default function Home() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-10">
         {!user ? (
           <input
-            className="px-5 w-72 py-2 rounded-3xl focus:outline-yellow-500 focus:outline-none transition-all duration-200 bg-white-100  dark:bg-[#a39c83] dark:text-black placeholder:text-black"
+            className="px-5 w-72 py-2 rounded-3xl focus:outline-yellow-500 focus:outline-none transition-all duration-200 bg-white-100  dark:bg-[#a39c83] dark:text-black placeholder:text-gray-400 dark:placeholder:text-zinc-600"
             type="text"
             placeholder="Your Full Name"
             value={userName}

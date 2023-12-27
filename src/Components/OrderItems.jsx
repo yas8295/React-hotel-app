@@ -7,7 +7,8 @@ export default function OrderItems({ item }) {
 
   useEffect(
     function () {
-      if (!fetcher.data && fetcher.state === "idle") fetcher.load("/menu");
+      if (!fetcher.data && fetcher.state === "idle")
+        fetcher.load("/React-Pizza-App/menu");
     },
     [fetcher]
   );

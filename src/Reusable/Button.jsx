@@ -14,7 +14,7 @@ export default function Button({
   width = "",
   rounded = "rounded-3xl",
   textSize = "text-sm",
-  focus = "",
+  focus = "focus:ring focus:bg-yellow-300 focus:ring-yellow-300 focus:ring-offset-2",
   align = "self-center",
 }) {
   return (

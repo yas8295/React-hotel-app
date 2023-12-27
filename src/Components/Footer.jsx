@@ -25,7 +25,7 @@ export default function Footer() {
             title="OPEN CART →"
             textColor="text-black"
             transition={{ type: "spring" }}
-            event={(e) => navigate("/Cart")}
+            event={(e) => navigate("/React-Pizza-App/Cart")}
           ></Button>
         </motion.div>
       ) : null}

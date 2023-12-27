@@ -13,13 +13,13 @@ export default function Header() {
   function handleSubmit(e) {
     e.preventDefault();
     if (!searchOrder) return;
-    navigate(`/order/${searchOrder}`);
+    navigate(`/React-Pizza-App/order/${searchOrder}`);
     setSearchOrder("");
   }
 
   return (
     <div className="flex dark:bg-[#45402e] dark:text-white sm:justify-between items-center flex-wrap gap-2 justify-center sm:ps-5 sm:pe-16 py-2 bg-yellow-400 w-full">
-      <Link className="flex  items-center">
+      <Link className="flex  items-center" to={"/React-Pizza-App/"}>
         <motion.img
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -33,7 +33,7 @@ export default function Header() {
       </Link>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
-          className="px-5 w-64 dark:bg-[#a39c83] dark:text-black placeholder:text-black text-sm py-2 rounded-3xl md:focus:w-72 focus:outline-none transition-all duration-700 bg-amber-100"
+          className="px-5 w-64 dark:bg-[#a39c83] dark:text-black placeholder:text-black text-sm py-2 rounded-3xl md:focus:w-72 focus:outline-none transition-all duration-700 bg-amber-100  placeholder:text-gray-400 dark:placeholder:text-zinc-600"
           type="text"
           placeholder="Search order #"
           value={searchOrder}

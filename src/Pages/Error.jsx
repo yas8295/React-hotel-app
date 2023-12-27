@@ -3,7 +3,6 @@ import "./Error.css";
 
 export default function Error() {
   const error = useRouteError();
-  console.log(error);
 
   return (
     <div className="flex dark:bg-stone-900 dark:text-slate-200 flex-col justify-center items-center min-h-screen bg-slate-100">
@@ -22,7 +21,7 @@ export default function Error() {
         </span>
       </section>
       <div className="link-container">
-        <Link to="/" className="more-link">
+        <Link to="/React-Pizza-App/" className="more-link">
           Go To Home
         </Link>
       </div>

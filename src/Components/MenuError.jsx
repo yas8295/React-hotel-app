@@ -1,11 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import image from "../images/cute-pizza-mascot-conducting-research-holding-magnifying-glass_700108-642.jpg";
 
-export default function OrderError() {
-  const { orderId } = useParams();
-
+export default function MenuError() {
   return (
     <div className="w-full dark:bg-stone-900 dark:text-slate-200 px-5 overflow-y-auto overflow-x-hidden grow">
       <motion.div
@@ -22,7 +20,8 @@ export default function OrderError() {
           </span>
         </Link>
         <h1 className="text-lg font-semibold">
-          Something went wrong 😢 Couldn't find order #{orderId}
+          Something went wrong! <br /> when fetching data from the menu, please
+          check your internet or visit us later.
         </h1>
         <img className="grow self-center" src={image} alt="" width={"300px"} />
       </motion.div>
