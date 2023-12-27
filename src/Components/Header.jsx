@@ -33,7 +33,7 @@ export default function Header() {
       </Link>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
-          className="px-5 w-64 dark:bg-[#a39c83] dark:text-black placeholder:text-black text-sm py-2 rounded-3xl md:focus:w-72 focus:outline-none transition-all duration-700 bg-amber-100"
+          className="px-5 w-64 dark:bg-[#a39c83] dark:text-black placeholder:text-black text-sm py-2 rounded-3xl md:focus:w-72 focus:outline-none transition-all duration-700 bg-amber-100  placeholder:text-gray-400 dark:placeholder:text-zinc-600"
           type="text"
           placeholder="Search order #"
           value={searchOrder}
