@@ -6,7 +6,7 @@ function Menu() {
   const menu = useLoaderData();
 
   return (
-    <div className="flex dark:bg-stone-900 dark:text-slate-200 flex-col grow self-start w-full overflow-y-auto overflow-x-hidden max-h-svh">
+    <div className="flex dark:bg-stone-900 dark:text-slate-200 flex-col grow self-start w-full overflow-y-auto overflow-x-hidden h-full">
       {menu.map((pizza) => (
         <MenuItem pizza={pizza} key={pizza.id} menu={menu}></MenuItem>
       ))}
