@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: "/React-Pizza-App/Menu",
         element: <Menu></Menu>,
         loader: menuLoader,
-        errorElement: <MenuError></MenuError>,
+        // errorElement: <MenuError></MenuError>,
       },
       { path: "/React-Pizza-App/Cart", element: <Cart></Cart> },
       {
