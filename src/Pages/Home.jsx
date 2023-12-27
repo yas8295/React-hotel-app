@@ -19,7 +19,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex gap-5 pt-14 dark:bg-stone-900 dark:text-slate-200 flex-col text-center items-center w-full px-5 grow overflow-y-auto overflow-x-clip max-h-svh">
+    <div className="flex h-full gap-5 pt-14 dark:bg-stone-900 dark:text-slate-200 flex-col text-center items-center w-full px-5 grow overflow-y-auto overflow-x-clip max-h-svh">
       <h1 className="md:text-3xl text-xl font-semibold">
         The best pizza.
         <br />

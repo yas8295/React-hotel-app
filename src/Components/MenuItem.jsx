@@ -79,7 +79,7 @@ function MenuItem({ pizza }) {
           >
             £{pizza.unitPrice}.00
           </motion.h1>
-          <div className="flex items-center justify-center gap-2 flex-wrap-reverse">
+          <div className="flex items-center justify-center gap-4 flex-wrap-reverse">
             <AnimatePresence mode="popLayout">
               {addToCart ? (
                 <div className="flex gap-2 items-center">
