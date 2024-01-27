@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../Reusable/Heading";
-import "../Components/Bookings/Bookings.module.css";
+import "../Components/Bookings/bookings.module.css";
 import BookingContent from "../Components/Bookings/BookingContent";
 import BookingSortButtons from "../Components/Bookings/BookingSortButtons";
 import { useGetBookings } from "../Services/Bookings/useBookingsHook";
