@@ -1,0 +1,9 @@
+:global(.cabins .active) {
+  background-color: #4f46e5;
+  color: white;
+  cursor: not-allowed;
+}
+
+:global(.cabins button:disabled) {
+  cursor: not-allowed;
+}

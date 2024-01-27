@@ -1,32 +1,32 @@
-import { motion } from "framer-motion";
 import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Button({
-  initial = { scale: 0, opacity: 0 },
-  title,
-  transition = { type: "spring", duration: 1 },
-  event = function () {},
-  textColor = "text-black",
-  padding = "py-2 px-5",
-  hover = "hover:bg-yellow-300",
-  bg = "bg-yellow-400",
+  children,
+  onClick,
+  bg = "bg-[#4f46e5]",
+  hover = "hover:bg-[#4a36c9]",
   border = "",
-  width = "",
-  rounded = "rounded-3xl",
-  textSize = "text-sm",
-  focus = "focus:ring focus:bg-yellow-300 focus:ring-yellow-300 focus:ring-offset-2",
-  align = "self-center",
+  text = "text-white",
+  padding = "px-3 py-2",
+  disabled = false,
+  type = "",
+  className = "",
+  mode = "",
 }) {
   return (
-    <motion.button
-      initial={initial}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={transition}
-      exit={{ scale: 0, opacity: 0 }}
-      onClick={(e) => event()}
-      className={`${rounded} ${hover} hover:duration-500 hover:text-black ${textSize} ${bg} ${border} ${width} ${padding} ${focus} text-center ${align} ${textColor}`}
-    >
-      {title}
-    </motion.button>
+    <AnimatePresence mode="wait">
+      <motion.button
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0, opacity: 0 }}
+        onClick={onClick}
+        className={`duration-300 ${bg} ${text} ${padding} rounded-md ${hover} ${border} ${className} ${mode} disabled:cursor-not-allowed`}
+        disabled={disabled}
+        type={type}
+      >
+        {children}
+      </motion.button>
+    </AnimatePresence>
   );
 }

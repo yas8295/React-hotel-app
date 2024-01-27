@@ -1,0 +1,7 @@
+:global(.header) a {
+  transition: 0.4s;
+}
+
+:global(.header) a:hover {
+  color: rgb(76, 78, 215);
+}

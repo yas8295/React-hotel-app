@@ -1,0 +1,9 @@
+:global(.bookings .active) {
+  background-color: #4f46e5;
+  color: white;
+  cursor: not-allowed;
+}
+
+:global(.bookings button:disabled) {
+  cursor: not-allowed;
+}

@@ -1,0 +1,30 @@
+:global(.sideBar .active) {
+  background-color: #f3f4f6;
+}
+:global(.sideBar .dark.active) {
+  background-color: #101820;
+}
+
+:global(.sideBar .active > :first-child) {
+  color: rgb(76, 78, 215);
+}
+
+:global(.sideBar .dark.active > :last-child) {
+  color: rgb(255, 255, 255);
+}
+
+:global(.sideBar .active > :last-child) {
+  color: rgb(0, 0, 0);
+}
+
+:global(.sideBar) a > :first-child {
+  transition: 0.4s;
+}
+
+:global(.sideBar) a > :last-child {
+  transition: 0.4s;
+}
+
+:global(.sideBar) a:hover > :first-child {
+  color: rgb(76, 78, 215);
+}

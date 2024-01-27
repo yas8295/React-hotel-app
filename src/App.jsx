@@ -1,59 +1,61 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 import AppLayout from "./AppLayout/AppLayout";
-import Home from "./Pages/Home";
-import { Provider } from "react-redux";
-import store from "./Services/Store";
-import Error from "./Pages/Error";
-import Menu from "./Pages/Menu";
-import { loader as menuLoader } from "./Pages/Menu";
-import Cart from "./Pages/Cart";
-import NewOrder, { action as actionCreateOrder } from "./Pages/NewOrder";
-import Order, {
-  action as actionOrderUpdate,
-  loader as loaderOrder,
-} from "./Pages/Order";
-import OrderError from "./Components/OrderError";
-import MenuError from "./Components/MenuError";
+import DashBoard from "./Pages/DashBoard";
+import Bookings from "./Pages/Bookings";
+import Cabins from "./Pages/Cabins";
+import Users from "./Pages/Users";
+import Settings from "./Pages/Settings";
+import Login from "./Pages/Login";
+import Account from "./Pages/Account";
+import { Toaster } from "react-hot-toast";
+import { Context } from "./Services/Context";
+import Booking from "./Pages/Booking";
+import User from "./Components/Authentication/User";
+import PageNotFound from "./Pages/PageNotFound";
 
-const router = createBrowserRouter([
-  {
-    element: <AppLayout></AppLayout>,
-    errorElement: <Error></Error>,
-    path: "/React-Pizza-App/",
-    children: [
-      {
-        path: "/React-Pizza-App/",
-        element: <Home></Home>,
-        errorElement: <Error></Error>,
-      },
-      {
-        path: "/React-Pizza-App/Menu",
-        element: <Menu></Menu>,
-        loader: menuLoader,
-        errorElement: <MenuError></MenuError>,
-      },
-      { path: "/React-Pizza-App/Cart", element: <Cart></Cart> },
-      {
-        path: "/React-Pizza-App/order/new",
-        element: <NewOrder></NewOrder>,
-        action: actionCreateOrder,
-        errorElement: <Error></Error>,
-      },
-      {
-        path: "/React-Pizza-App/order/:orderId",
-        element: <Order></Order>,
-        loader: loaderOrder,
-        action: actionOrderUpdate,
-        errorElement: <OrderError></OrderError>,
-      },
-    ],
-  },
-]);
+const queryClint = new QueryClient();
 
 export default function App() {
   return (
-    <Provider store={store}>
-      <RouterProvider router={router}></RouterProvider>
-    </Provider>
+    <Context>
+      <QueryClientProvider client={queryClint}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={<Login></Login>}></Route>
+            <Route
+              element={
+                <User>
+                  <AppLayout></AppLayout>
+                </User>
+              }
+            >
+              <Route index element={<DashBoard></DashBoard>}></Route>
+              <Route
+                index
+                path="/dashboard"
+                element={<DashBoard></DashBoard>}
+              ></Route>
+              <Route path="/bookings" element={<Bookings></Bookings>}></Route>
+              <Route
+                path="bookings/:bookingId"
+                element={<Booking></Booking>}
+              ></Route>
+              <Route path="/cabins" element={<Cabins></Cabins>}></Route>
+              <Route path="/users" element={<Users></Users>}></Route>
+              <Route path="/settings" element={<Settings></Settings>}></Route>
+              <Route path="/account" element={<Account></Account>}></Route>
+            </Route>
+            <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
+          </Routes>
+        </BrowserRouter>
+        <Toaster
+          toastOptions={{
+            className: `dark:bg-[#18212f!important] bg-[white!important] text-[blacki!mportant] dark:text-[white!important]`,
+          }}
+        ></Toaster>
+      </QueryClientProvider>
+    </Context>
   );
 }

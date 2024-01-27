@@ -1,22 +1,14 @@
-import { Outlet, useNavigation } from "react-router-dom";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-import Loading from "../Components/Loading";
-import DarkModeButton from "../Components/DarkModeButton";
-
+import { Outlet } from "react-router-dom";
+import Header from "../Components/Header/Header";
+import SideBar from "../Components/SideBar/SideBar";
 export default function AppLayout() {
-  const navigation = useNavigation();
-  const loading = navigation.state === "loading";
-
   return (
-    <div className="flex justify-between items-center flex-col w-full h-screen overflow-y-hidden">
-      <div className="absolute right-[-4px] top-[13px] scale-[0.70] rotate-90">
-        <DarkModeButton />
-      </div>
+    <div className="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] h-screen">
+      <SideBar></SideBar>
       <Header></Header>
-      {loading && <Loading></Loading>}
-      <Outlet></Outlet>
-      <Footer></Footer>
+      <div className="sm:px-4 px-2 py-5 overflow-y-auto overflow-x-hidden bg-[url(https://www.transparenttextures.com/patterns/tileable-wood.png)] dark:bg-[url(https://www.transparenttextures.com/patterns/dark-wood.png)] dark:bg-[#101620] dark:text-stone-300">
+        <Outlet></Outlet>
+      </div>
     </div>
   );
 }
