@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import AppLayout from "./AppLayout/AppLayout";
 import DashBoard from "./Pages/DashBoard";
@@ -21,7 +21,7 @@ export default function App() {
   return (
     <Context>
       <QueryClientProvider client={queryClint}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/login" element={<Login></Login>}></Route>
             <Route
@@ -49,7 +49,7 @@ export default function App() {
             </Route>
             <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
         <Toaster
           toastOptions={{
             className: `dark:bg-[#18212f!important] bg-[white!important] text-[blacki!mportant] dark:text-[white!important]`,

@@ -34,7 +34,7 @@ export default function SideBar() {
         className="overflow-y-hidden flex flex-col gap-2 lg:mt-4 lg:items-start items-center w-full"
       >
         <NavLink
-          to="/dashboard"
+          to="/"
           className={`flex items-center gap-2 py-2 lg:pe-16 lg:ps-3 grow w-full hover:bg-gray-100 dark:hover:bg-[#101820] duration-300 ${
             mode === "dark" ? "dark" : ""
           }`}

@@ -6,18 +6,19 @@ import { FaRegMoon } from "react-icons/fa";
 
 if (localStorage.theme === "dark") {
   document.documentElement.classList.add("dark");
-} else {
+} else if (localStorage.theme === "light") {
   document.documentElement.classList.remove("dark");
 }
 
 function mode() {
   document.documentElement.classList.toggle("dark");
-  if (localStorage.theme === "light") localStorage.theme = "dark";
+  if (localStorage.theme === "light" || !localStorage.theme)
+    localStorage.theme = "dark";
   else localStorage.theme = "light";
 }
 
 export default function DarkModeButton() {
-  const [darkMode, setMode] = useState(localStorage.theme);
+  const [darkMode, setMode] = useState(localStorage.theme || "light");
   const { setMode: change } = useContext(contexts);
 
   return (

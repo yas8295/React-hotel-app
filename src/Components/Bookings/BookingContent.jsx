@@ -1,7 +1,7 @@
 import React from "react";
 import BookingItem from "./BookingItem";
 import BookingOptionModal from "./BookingOptionModal";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function BookingContent({ bookings }) {
   if (bookings.length === 0)
@@ -28,11 +28,9 @@ export default function BookingContent({ bookings }) {
             <h1>AMOUNT</h1>
             <div></div>
           </div>
-          <AnimatePresence mode="sync">
-            {bookings.map((booking) => (
-              <BookingItem key={booking.id} booking={booking}></BookingItem>
-            ))}
-          </AnimatePresence>
+          {bookings.map((booking) => (
+            <BookingItem key={booking.id} booking={booking}></BookingItem>
+          ))}
         </div>
       </motion.div>
     </BookingOptionModal>
