@@ -25,7 +25,7 @@ export default function SideBar() {
         initial={{ x: "-200%", opacity: 0, scale: 0 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         className="w-[30px] lg:hidden block"
-        src="/header.png"
+        src="header.png"
         alt=""
       />
       <motion.div

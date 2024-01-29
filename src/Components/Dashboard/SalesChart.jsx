@@ -20,8 +20,8 @@ export default function SalesChart({ bookings }) {
   const days = searchParams.get("last") || 6;
 
   const allDates = eachDayOfInterval({
-    start: subDays(new Date(), days),
-    end: new Date(),
+    start: subDays(new Date("2024-01-26"), days),
+    end: new Date("2024-01-26"),
   });
 
   const data = allDates.map((date) => {
