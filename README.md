@@ -1,1 +1,1 @@
-### https://react-app-hotel.netlify.app/
+### https://yas8295.github.io/React-hotel-app/
